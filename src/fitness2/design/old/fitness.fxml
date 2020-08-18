@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1280.0" style="-fx-background-color: #231f20;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitness2.FitnessController">
+   <left>
+      <VBox prefHeight="570.0" prefWidth="422.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="176.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/height_box.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="-50.0" />
+                     </StackPane.margin>
+                  </ImageView>
+                  <Label fx:id="heightLabel" prefHeight="167.0" prefWidth="204.0" style="-fx-font-family: DS-Digital;" text="180" textFill="#eae5e5">
+                     <font>
+                        <Font name="DS-Digital Bold Italic" size="110.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="-20.0" top="-30.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+            <ImageView fx:id="addButton" fitHeight="104.0" fitWidth="129.0" onMouseClicked="#addButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/plus.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="190.0" right="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fx:id="searchButton" fitHeight="104.0" fitWidth="129.0" onMouseClicked="#searchButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/search2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="190.0" right="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fx:id="stopButton" fitHeight="115.0" fitWidth="132.0" onMouseClicked="#stopButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/stop2.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="290.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="850.0" prefWidth="442.5" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="176.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/FLEX-BOX.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="-50.0" />
+                     </StackPane.margin>
+                  </ImageView>
+                  <Label fx:id="flexibleLabel" prefHeight="167.0" prefWidth="225.0" style="-fx-font-family: DS-Digital;" textFill="#eae5e5">
+                     <font>
+                        <Font name="DS-Digital Bold Italic" size="110.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets left="-50.0" top="-30.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+            <ImageView fx:id="laserButton" fitHeight="104.0" fitWidth="129.0" onMouseClicked="#laserButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/laser.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="123.0" right="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fx:id="deleteButton" fitHeight="104.0" fitWidth="129.0" onMouseClicked="#deleteButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/delete.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="123.0" right="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fx:id="startButton" fitHeight="115.0" fitWidth="132.0" onMouseClicked="#startButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@start.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets left="20.5" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <bottom>
+      <Pagination fx:id="pager" prefHeight="131.0" prefWidth="1550.0" stylesheets="@pagination.css" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="statusLabel" text="Code: 457             Stage: Primary" textFill="#fafafa">
+               <font>
+                  <Font name="Trebuchet MS" size="43.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-30.0" left="10.0" />
+               </VBox.margin>
+            </Label>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="380.0" fitWidth="572.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/main_box.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="385.0" prefWidth="614.0">
+                     <children>
+                        <Label fx:id="timeLabel" text="01:30" textFill="#fafafa">
+                           <font>
+                              <Font name="OCR A Extended" size="150.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="70.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="25.0" prefWidth="497.0">
+                           <children>
+                              <Label fx:id="countLabel" text="15" textFill="#fafafa">
+                                 <font>
+                                    <Font name="OCR A Extended" size="96.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="markLabel" text="30" textFill="#fafafa">
+                                 <font>
+                                    <Font name="OCR A Extended" size="96.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/FRAME.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="previousLabel" text="SITUP" textFill="#fafafa">
+                           <font>
+                              <Font name="Trebuchet MS" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <ImageView fx:id="previousButton" fitHeight="96.0" fitWidth="131.0" onMouseClicked="#previousButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/back2-2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="enterButton" fitHeight="107.0" fitWidth="120.0" onMouseClicked="#enterButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/enter2-3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="nextButton" fitHeight="99.0" fitWidth="141.0" onMouseClicked="#nextButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/next2-2.png" />
+                     </image>
+                  </ImageView>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/FRAME.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="nextLabel" text="RUN" textFill="#fafafa">
+                           <font>
+                              <Font name="Trebuchet MS" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="-20.0" />
+               </VBox.margin>
+            </HBox>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Capture.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="currentLabel" text="PUSHUP" textFill="#b91027">
+                     <font>
+                        <Font name="AR CENA" size="40.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets top="50.0" />
+                     </StackPane.margin>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="100.0" top="100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="1525.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="closeButton" fitHeight="62.0" fitWidth="53.0" onMouseClicked="#closeButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/close2.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

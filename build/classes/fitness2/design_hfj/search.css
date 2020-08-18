@@ -1,0 +1,13 @@
+
+.search:pressed, .start:pressed, .close:pressed, .stop:pressed{
+	-fx-translate-x:1;
+	-fx-translate-y:1;
+	-fx-translate-z:1;
+	-fx-opacity	:.9;
+}
+
+.search:hover, .start:hover, .close:hover, .stop:hover{
+	-fx-cursor:hand ;
+	-fx-opacity: .9;
+	
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1280.0" style="-fx-background-color: #231f20;" stylesheets="@search.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitness2.FitnessHFController">
+   <bottom>
+      <Pagination fx:id="pager" prefHeight="131.0" prefWidth="1550.0" stylesheets="@pagination.css" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="1525.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="closeButton" fitHeight="62.0" fitWidth="53.0" onMouseClicked="#closeButtonClicked" pickOnBounds="true" preserveRatio="true" styleClass="close">
+               <image>
+                  <Image url="@icons/close.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <FlowPane alignment="CENTER" columnHalignment="RIGHT" prefHeight="100.0" prefWidth="1176.0">
+               <children>
+                  <Label fx:id="statusLabel" contentDisplay="CENTER" prefHeight="84.0" prefWidth="910.0" text="Code: ahmed      Stage: Preparatory" textFill="#fafafa">
+                     <font>
+                        <Font name="Monospaced Regular" size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </FlowPane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="240.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/height_box.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="heightLabel" prefHeight="167.0" prefWidth="223.0" style="-fx-font-family: DS-Digital;" text="178" textFill="#eae5e5">
+               <font>
+                  <Font name="DS-Digital Bold Italic" size="130.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets top="-30.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+   </left>
+   <right>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="240.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/FLEX-BOX.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="flexibleLabel" prefHeight="167.0" prefWidth="225.0" style="-fx-font-family: DS-Digital;" text="00.5" textFill="#eae5e5">
+               <font>
+                  <Font name="DS-Digital Bold Italic" size="120.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets top="-30.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+   </right>
+   <center>
+      <VBox prefHeight="363.0" prefWidth="600.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="146.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="searchButton" fitHeight="97.0" fitWidth="137.0" onMouseClicked="#searchButtonClicked" pickOnBounds="true" preserveRatio="true" styleClass="search">
+                     <image>
+                        <Image url="@icons/search2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ToggleButton fx:id="heightTButton" mnemonicParsing="false" onMouseClicked="#heightTButtonClicked" prefHeight="120.0" prefWidth="200.0" selected="true" stylesheets="@toggle-button.css" text="Height" textFill="WHITE">
+                           <font>
+                              <Font size="44.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="testSelect" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="flexTButton" mnemonicParsing="false" onMouseClicked="#flexTButtonClicked" prefHeight="120.0" prefWidth="200.0" stylesheets="@toggle-button.css" text="Flex" toggleGroup="$testSelect">
+                           <font>
+                              <Font size="44.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </FlowPane>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="stopButton" fitHeight="120.0" fitWidth="140.0" onMouseClicked="#StopButtonClicked" pickOnBounds="true" preserveRatio="true" styleClass="stop" visible="false">
+                     <image>
+                        <Image url="@icons/stop2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="startButton" fitHeight="120.0" fitWidth="140.0" onMouseClicked="#startButtonClicked" pickOnBounds="true" preserveRatio="true" styleClass="start">
+                     <image>
+                        <Image url="@start.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
